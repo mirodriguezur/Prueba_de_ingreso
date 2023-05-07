@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UsersViewController" customModule="UsersApp" customModuleProvider="target">
             <connections>
+                <outlet property="searchBar" destination="z4D-9G-KCb" id="l2p-LI-vGk"/>
+                <outlet property="tableView" destination="MdP-Fi-TJe" id="Qsy-B2-y0q"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

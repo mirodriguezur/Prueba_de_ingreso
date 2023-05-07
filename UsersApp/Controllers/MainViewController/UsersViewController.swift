@@ -9,7 +9,23 @@ import UIKit
 
 class UsersViewController: UIViewController {
 
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var viewModel = UsersViewModel()
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupView()
+    }
+    
+    private func setupView() {
+        setupHeaderTitle()
+        setupTableView()
+    }
+    
+    private func setupHeaderTitle() {
         let titleLabel = UILabel()
         titleLabel.text = "Prueba de ingreso"
         titleLabel.font = UIFont.boldSystemFont(ofSize: 22)
@@ -27,8 +43,6 @@ class UsersViewController: UIViewController {
         navigationItem.titleView = titleView
         
         navigationController?.navigationBar.backgroundColor = UIColor(red: 0.0/255.0, green: 102.0/255.0, blue: 51.0/255.0, alpha: 1.0)
-      
-        super.viewDidLoad()
     }
-
+    
 }
