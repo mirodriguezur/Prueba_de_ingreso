@@ -38,6 +38,19 @@ class UserTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func buttonTapped(_ sender: Any) {
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let viewController = windowScene.windows.first?.rootViewController else { return }
+        
+        let publicationsView = PublicationsViewController()
+        
+        publicationsView.nameText = name.text
+        publicationsView.phoneText = phone.text
+        publicationsView.emailText = email.text
+        
+        viewController.present(publicationsView, animated: true)
+    }
+    
     func setupCell(viewModel: UserTableCellViewModel) {
         self.name.text = viewModel.name
         self.phone.text = viewModel.phone

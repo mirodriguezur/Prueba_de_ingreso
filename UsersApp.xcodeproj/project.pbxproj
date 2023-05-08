@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1C0CC2902A08AAD60090DCC2 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CC28F2A08AAD60090DCC2 /* UIViewExtensions.swift */; };
 		1C0CC2922A08B0E90090DCC2 /* UsersViewController+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CC2912A08B0E90090DCC2 /* UsersViewController+SearchBar.swift */; };
+		1C0CC2962A08DA8C0090DCC2 /* PublicationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CC2942A08DA8C0090DCC2 /* PublicationsViewController.swift */; };
+		1C0CC2972A08DA8C0090DCC2 /* PublicationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C0CC2952A08DA8C0090DCC2 /* PublicationsViewController.xib */; };
 		1C62DA2A2A089DBC00609E38 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C62DA282A089DBC00609E38 /* UserTableViewCell.swift */; };
 		1C62DA2B2A089DBC00609E38 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C62DA292A089DBC00609E38 /* UserTableViewCell.xib */; };
 		1C976B692A07F20F00EC4590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C976B682A07F20F00EC4590 /* AppDelegate.swift */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		1C0CC28F2A08AAD60090DCC2 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		1C0CC2912A08B0E90090DCC2 /* UsersViewController+SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsersViewController+SearchBar.swift"; sourceTree = "<group>"; };
+		1C0CC2942A08DA8C0090DCC2 /* PublicationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationsViewController.swift; sourceTree = "<group>"; };
+		1C0CC2952A08DA8C0090DCC2 /* PublicationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PublicationsViewController.xib; sourceTree = "<group>"; };
 		1C62DA282A089DBC00609E38 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		1C62DA292A089DBC00609E38 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		1C976B652A07F20F00EC4590 /* UsersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +91,15 @@
 				1C0CC28F2A08AAD60090DCC2 /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1C0CC2932A08DA450090DCC2 /* PublicationsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C0CC2942A08DA8C0090DCC2 /* PublicationsViewController.swift */,
+				1C0CC2952A08DA8C0090DCC2 /* PublicationsViewController.xib */,
+			);
+			path = PublicationsViewController;
 			sourceTree = "<group>";
 		};
 		1C976B5C2A07F20F00EC4590 = {
@@ -137,6 +150,7 @@
 		1C976B982A07F38C00EC4590 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1C0CC2932A08DA450090DCC2 /* PublicationsViewController */,
 				1C976B992A07F39D00EC4590 /* MainViewController */,
 			);
 			path = Controllers;
@@ -297,6 +311,7 @@
 				1C62DA2B2A089DBC00609E38 /* UserTableViewCell.xib in Resources */,
 				1C976B752A07F20F00EC4590 /* LaunchScreen.storyboard in Resources */,
 				1C976B9D2A07F3B800EC4590 /* UsersViewController.xib in Resources */,
+				1C0CC2972A08DA8C0090DCC2 /* PublicationsViewController.xib in Resources */,
 				1C976B722A07F20F00EC4590 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C0CC2962A08DA8C0090DCC2 /* PublicationsViewController.swift in Sources */,
 				1C976B692A07F20F00EC4590 /* AppDelegate.swift in Sources */,
 				1C976BA22A0801CD00EC4590 /* UsersViewModel.swift in Sources */,
 				1C62DA2A2A089DBC00609E38 /* UserTableViewCell.swift in Sources */,
