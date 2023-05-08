@@ -11,7 +11,7 @@ public final class RemoteUsersLoader {
     private let client: HTTPClient
     private let url: URL
     
-    public init(url: URL, client: HTTPClient) {
+    public init(url: URL, client: HTTPClient = URLSessionHTTPClient()) {
         self.client = client
         self.url = url
     }
@@ -28,7 +28,10 @@ public final class RemoteUsersLoader {
     
     public func load(completion: @escaping (Result) -> Void) {
         client.get(from: url) { [weak self] result in
-            guard self != nil else { return }
+            guard self != nil else {
+                return
+                
+            }
             switch result {
             case let .success(data, response):
                 if response.statusCode == 200, let users = try? JSONDecoder().decode([Users].self, from: data) {

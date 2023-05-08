@@ -22,6 +22,9 @@ public class URLSessionHTTPClient: HTTPClient {
                 completion(.failure(error))
             } else if let data = data, let response = response as? HTTPURLResponse {
                 completion(.success(data, response))
+                if let string = String(data: data, encoding: .utf8) {
+                        print("Data recibida: \(string)")
+                    }
             } else {
                 completion(.failure(UnexpectedValuesRepresentation()))
             }

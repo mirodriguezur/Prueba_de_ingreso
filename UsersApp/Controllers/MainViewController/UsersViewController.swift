@@ -20,6 +20,11 @@ class UsersViewController: UIViewController {
         setupView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.getUsers()
+    }
+    
     private func setupView() {
         setupHeaderTitle()
         setupTableView()
