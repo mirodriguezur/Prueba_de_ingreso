@@ -13,6 +13,7 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
     func setupTableView() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.separatorStyle = .none
         
         registerCell()
     }

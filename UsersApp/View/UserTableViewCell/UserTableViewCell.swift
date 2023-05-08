@@ -17,7 +17,9 @@ class UserTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        containerView.grid()
+        containerView.addBorder(color: .lightGray, width: 1)
     }
     
     static func register() -> UINib {

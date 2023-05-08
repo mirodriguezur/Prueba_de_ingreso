@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C0CC2902A08AAD60090DCC2 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CC28F2A08AAD60090DCC2 /* UIViewExtensions.swift */; };
 		1C62DA2A2A089DBC00609E38 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C62DA282A089DBC00609E38 /* UserTableViewCell.swift */; };
 		1C62DA2B2A089DBC00609E38 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C62DA292A089DBC00609E38 /* UserTableViewCell.xib */; };
 		1C976B692A07F20F00EC4590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C976B682A07F20F00EC4590 /* AppDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C0CC28F2A08AAD60090DCC2 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		1C62DA282A089DBC00609E38 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		1C62DA292A089DBC00609E38 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		1C976B652A07F20F00EC4590 /* UsersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C0CC28E2A08AABB0090DCC2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1C0CC28F2A08AAD60090DCC2 /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1C976B5C2A07F20F00EC4590 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +108,7 @@
 		1C976B672A07F20F00EC4590 /* UsersApp */ = {
 			isa = PBXGroup;
 			children = (
+				1C0CC28E2A08AABB0090DCC2 /* Extensions */,
 				1CBDCD922A088EBC00290C29 /* View */,
 				1C976BAE2A08149900EC4590 /* Classes */,
 				1C976BA62A08100E00EC4590 /* Model */,
@@ -311,6 +322,7 @@
 				1CBDCD9B2A0895B500290C29 /* UserTableCellViewModel.swift in Sources */,
 				1C976BA82A0810DD00EC4590 /* RemoteUsersLoader.swift in Sources */,
 				1C976BA52A080C0600EC4590 /* UsersModel.swift in Sources */,
+				1C0CC2902A08AAD60090DCC2 /* UIViewExtensions.swift in Sources */,
 				1C976B9C2A07F3B800EC4590 /* UsersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
