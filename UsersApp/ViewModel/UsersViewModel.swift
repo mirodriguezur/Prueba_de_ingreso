@@ -7,11 +7,18 @@
 
 import Foundation
 
+protocol AlertPresenter {
+    func showConnectivityErrorAlert()
+    func showInvalidDataAlert()
+}
+
 class UsersViewModel {
     
     var dataSource: [Users]?
     let remoteUserloader: RemoteUsersLoader?
     var users: Observable<[UserTableCellViewModel]> = Observable(nil)
+    
+    var delegate: AlertPresenter?
     
     public init(remoteUserLoader: RemoteUsersLoader = RemoteUsersLoader(url: URL(string: "http://localhost:4567/users")!)){
         self.remoteUserloader = remoteUserLoader
@@ -31,9 +38,9 @@ class UsersViewModel {
             case let .failure(error):
                 switch error {
                 case .connectivity:
-                    print("connectivity error")
+                    self?.delegate?.showConnectivityErrorAlert()
                 case .invalidData:
-                    print("invalid data")
+                    self?.delegate?.showInvalidDataAlert()
                 }
             }
         }

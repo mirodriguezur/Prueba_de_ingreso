@@ -19,6 +19,7 @@ class UsersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.delegate = self
         searchBar.delegate = self
         
         setupView()
@@ -66,5 +67,33 @@ class UsersViewController: UIViewController {
             self.reloadTableView()
         }
     }
+}
+
+extension UsersViewController: AlertPresenter {
+    func showConnectivityErrorAlert() {
+        DispatchQueue.main.async { [weak self] in
+            guard self != nil else { return }
+            
+            let alert = UIAlertController(title: "Connection failure", message: "Check your internet connectivity", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            
+            alert.addAction(action)
+            self?.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func showInvalidDataAlert() {
+        DispatchQueue.main.async { [weak self] in
+            guard self != nil else { return }
+            
+            let alert = UIAlertController(title: "Invalid data", message: "Try again later", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            
+            alert.addAction(action)
+            self?.present(alert, animated: true, completion: nil)
+        }
+        
+    }
+    
     
 }
