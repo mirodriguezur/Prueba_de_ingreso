@@ -19,6 +19,7 @@
 		1C976BA82A0810DD00EC4590 /* RemoteUsersLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C976BA72A0810DD00EC4590 /* RemoteUsersLoader.swift */; };
 		1C976BAD2A0812F300EC4590 /* RemoteUsersLoaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C976BAC2A0812F300EC4590 /* RemoteUsersLoaderTest.swift */; };
 		1C976BB22A0816FF00EC4590 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C976BB12A0816FF00EC4590 /* HTTPClient.swift */; };
+		1CB1B9D22A08781E00685F53 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB1B9D12A08781E00685F53 /* URLSessionHTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		1C976BA72A0810DD00EC4590 /* RemoteUsersLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUsersLoader.swift; sourceTree = "<group>"; };
 		1C976BAC2A0812F300EC4590 /* RemoteUsersLoaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUsersLoaderTest.swift; sourceTree = "<group>"; };
 		1C976BB12A0816FF00EC4590 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		1CB1B9D12A08781E00685F53 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			children = (
 				1C976BA72A0810DD00EC4590 /* RemoteUsersLoader.swift */,
 				1C976BB12A0816FF00EC4590 /* HTTPClient.swift */,
+				1CB1B9D12A08781E00685F53 /* URLSessionHTTPClient.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				1C976B692A07F20F00EC4590 /* AppDelegate.swift in Sources */,
 				1C976BA22A0801CD00EC4590 /* UsersViewModel.swift in Sources */,
 				1C976BB22A0816FF00EC4590 /* HTTPClient.swift in Sources */,
+				1CB1B9D22A08781E00685F53 /* URLSessionHTTPClient.swift in Sources */,
 				1C976B9F2A07FE4E00EC4590 /* UsersViewController+TableView.swift in Sources */,
 				1C976BA82A0810DD00EC4590 /* RemoteUsersLoader.swift in Sources */,
 				1C976BA52A080C0600EC4590 /* UsersModel.swift in Sources */,
