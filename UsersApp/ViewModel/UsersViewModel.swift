@@ -9,8 +9,9 @@ import Foundation
 
 class UsersViewModel {
     
-    var dataSource = [Users]()
+    var dataSource: [Users]?
     let remoteUserloader: RemoteUsersLoader?
+    var users: Observable<[UserTableCellViewModel]> = Observable(nil)
     
     public init(remoteUserLoader: RemoteUsersLoader = RemoteUsersLoader(url: URL(string: "http://localhost:4567/users")!)){
         self.remoteUserloader = remoteUserLoader
@@ -21,7 +22,7 @@ class UsersViewModel {
     }
     
     func numberOfRows(in: Int) -> Int {
-        30
+        dataSource?.count ?? 0
     }
     
     public func getUsers() {
@@ -30,6 +31,7 @@ class UsersViewModel {
             switch result {
             case let .success(users):
                 self?.dataSource = users
+                self?.mapUserData()
             case let .failure(error):
                 switch error {
                 case .connectivity:
@@ -39,5 +41,9 @@ class UsersViewModel {
                 }
             }
         }
+    }
+    
+    private func mapUserData() {
+        users.value = self.dataSource?.compactMap({UserTableCellViewModel(user: $0)})
     }
 }

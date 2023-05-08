@@ -14,10 +14,13 @@ class UsersViewController: UIViewController {
     
     var viewModel = UsersViewModel()
     
+    var usersDataSource: [UserTableCellViewModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
+        bindViewModel()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,6 +51,17 @@ class UsersViewController: UIViewController {
         navigationItem.titleView = titleView
         
         navigationController?.navigationBar.backgroundColor = UIColor(red: 0.0/255.0, green: 102.0/255.0, blue: 51.0/255.0, alpha: 1.0)
+    }
+    
+    func bindViewModel() {
+        viewModel.users.bind { [weak self] users in
+            guard let self = self,
+                  let users = users else {
+                return
+            }
+            self.usersDataSource = users
+            self.reloadTableView()
+        }
     }
     
 }

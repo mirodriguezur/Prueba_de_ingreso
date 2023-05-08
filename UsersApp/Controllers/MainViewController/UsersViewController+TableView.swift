@@ -17,8 +17,14 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
         registerCell()
     }
     
+    func reloadTableView() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
     func registerCell(){
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(UserTableViewCell.register(), forCellReuseIdentifier: UserTableViewCell.identifier)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -29,10 +35,17 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
         viewModel.numberOfRows(in: section)
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        200
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.identifier, for: indexPath) as? UserTableViewCell else {
+            return UITableViewCell()
+        }
         
-        cell.textLabel?.text = "\(indexPath.row)"
+        cell.setupCell(viewModel: usersDataSource[indexPath.row])
+        cell.selectionStyle = .none
         return cell
     }
 }
