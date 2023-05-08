@@ -33,7 +33,7 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.numberOfRows(in: section)
+        return filteredUsers.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -45,7 +45,7 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.setupCell(viewModel: usersDataSource[indexPath.row])
+        cell.setupCell(viewModel: filteredUsers[indexPath.row])
         cell.selectionStyle = .none
         return cell
     }

@@ -21,10 +21,6 @@ class UsersViewModel {
         1
     }
     
-    func numberOfRows(in: Int) -> Int {
-        dataSource?.count ?? 0
-    }
-    
     public func getUsers() {
         remoteUserloader?.load { [weak self] result in
             guard self != nil else { return }

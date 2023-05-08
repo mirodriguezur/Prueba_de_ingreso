@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C0CC2902A08AAD60090DCC2 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CC28F2A08AAD60090DCC2 /* UIViewExtensions.swift */; };
+		1C0CC2922A08B0E90090DCC2 /* UsersViewController+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CC2912A08B0E90090DCC2 /* UsersViewController+SearchBar.swift */; };
 		1C62DA2A2A089DBC00609E38 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C62DA282A089DBC00609E38 /* UserTableViewCell.swift */; };
 		1C62DA2B2A089DBC00609E38 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C62DA292A089DBC00609E38 /* UserTableViewCell.xib */; };
 		1C976B692A07F20F00EC4590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C976B682A07F20F00EC4590 /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		1C0CC28F2A08AAD60090DCC2 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		1C0CC2912A08B0E90090DCC2 /* UsersViewController+SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsersViewController+SearchBar.swift"; sourceTree = "<group>"; };
 		1C62DA282A089DBC00609E38 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		1C62DA292A089DBC00609E38 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		1C976B652A07F20F00EC4590 /* UsersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +148,7 @@
 				1C976B9A2A07F3B800EC4590 /* UsersViewController.swift */,
 				1C976B9B2A07F3B800EC4590 /* UsersViewController.xib */,
 				1C976B9E2A07FE4E00EC4590 /* UsersViewController+TableView.swift */,
+				1C0CC2912A08B0E90090DCC2 /* UsersViewController+SearchBar.swift */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				1C62DA2A2A089DBC00609E38 /* UserTableViewCell.swift in Sources */,
 				1C976BB22A0816FF00EC4590 /* HTTPClient.swift in Sources */,
 				1CB1B9D22A08781E00685F53 /* URLSessionHTTPClient.swift in Sources */,
+				1C0CC2922A08B0E90090DCC2 /* UsersViewController+SearchBar.swift in Sources */,
 				1CBDCD8F2A088DD900290C29 /* Observable.swift in Sources */,
 				1C976B9F2A07FE4E00EC4590 /* UsersViewController+TableView.swift in Sources */,
 				1CBDCD9B2A0895B500290C29 /* UserTableCellViewModel.swift in Sources */,

@@ -15,9 +15,11 @@ class UsersViewController: UIViewController {
     var viewModel = UsersViewModel()
     
     var usersDataSource: [UserTableCellViewModel] = []
+    var filteredUsers: [UserTableCellViewModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
         
         setupView()
         bindViewModel()
@@ -60,6 +62,7 @@ class UsersViewController: UIViewController {
                 return
             }
             self.usersDataSource = users
+            filteredUsers = usersDataSource
             self.reloadTableView()
         }
     }
