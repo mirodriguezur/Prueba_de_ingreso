@@ -20,7 +20,7 @@ class UsersViewModel {
     
     var delegate: AlertPresenter?
     
-    public init(remoteUserLoader: RemoteUsersLoader = RemoteUsersLoader(url: URL(string: "http://localhost:4567/users")!)){
+    public init(remoteUserLoader: RemoteUsersLoader = RemoteUsersLoader(url: URL(string: "https://jsonplaceholder.typicode.com/users")!)){
         self.remoteUserloader = remoteUserLoader
     }
     
