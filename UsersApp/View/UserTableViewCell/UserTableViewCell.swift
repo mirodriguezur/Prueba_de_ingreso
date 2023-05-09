@@ -15,6 +15,8 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var button: UIButton!
     
+    var userId: Int?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -47,6 +49,7 @@ class UserTableViewCell: UITableViewCell {
         publicationsView.nameText = name.text
         publicationsView.phoneText = phone.text
         publicationsView.emailText = email.text
+        publicationsView.userId = userId
         
         viewController.present(publicationsView, animated: true)
     }
@@ -55,6 +58,7 @@ class UserTableViewCell: UITableViewCell {
         self.name.text = viewModel.name
         self.phone.text = viewModel.phone
         self.email.text = viewModel.email
+        self.userId = viewModel.id
     }
     
 }

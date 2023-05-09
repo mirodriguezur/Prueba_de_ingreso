@@ -26,6 +26,11 @@ public final class RemoteUsersLoader {
         case failure(Error)
     }
     
+    public enum ResultPosts: Equatable {
+        case success([Posts])
+        case failure(Error)
+    }
+    
     public func load(completion: @escaping (Result) -> Void) {
         client.get(from: url) { [weak self] result in
             guard self != nil else {
@@ -36,6 +41,37 @@ public final class RemoteUsersLoader {
             case let .success(data, response):
                 if response.statusCode == 200, let users = try? JSONDecoder().decode([Users].self, from: data) {
                     completion(.success(users))
+                } else {
+                    completion(.failure(.invalidData))
+                }
+            case .failure:
+                completion(.failure(.connectivity))
+            }
+        }
+    }
+    
+    public func loadPosts(userId: Int, completion: @escaping (ResultPosts) -> Void) {
+//        let path = "/posts?userId=\(userId)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+//        let urlPost = url.appendingPathComponent(path)
+//
+        
+        let path = "/posts"
+        let userId = "\(userId)"
+        var urlComponents = URLComponents(url: url.appendingPathComponent(path), resolvingAgainstBaseURL: false)!
+        urlComponents.queryItems = [URLQueryItem(name: "Id", value: userId)]
+        let urlPost = urlComponents.url!
+        
+        
+        client.get(from: urlPost) { [weak self] result in
+            guard self != nil else {
+                return
+                
+            }
+            switch result {
+            case let .success(data, response):
+
+                if response.statusCode == 200, let posts = try? JSONDecoder().decode([Posts].self, from: data) {
+                    completion(.success(posts))
                 } else {
                     completion(.failure(.invalidData))
                 }

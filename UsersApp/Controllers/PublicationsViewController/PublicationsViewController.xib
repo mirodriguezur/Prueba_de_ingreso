@@ -13,7 +13,7 @@
                 <outlet property="email" destination="I3n-aZ-9qY" id="OAy-iW-JAv"/>
                 <outlet property="name" destination="Xm6-zS-wxx" id="9Rn-2y-QlL"/>
                 <outlet property="phone" destination="lS6-KT-J3e" id="A1D-zd-GJN"/>
-                <outlet property="publications" destination="CFR-yz-3TM" id="exk-zW-14p"/>
+                <outlet property="tableView" destination="edg-hg-5Ej" id="DiI-4K-kJf"/>
                 <outlet property="view" destination="93S-eR-4AE" id="GaH-jO-hQ0"/>
             </connections>
         </placeholder>
@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59y-b2-lv1">
-                    <rect key="frame" x="50" y="159" width="300" height="592"/>
+                    <rect key="frame" x="50" y="159" width="300" height="610"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vR6-D3-DyN">
                             <rect key="frame" x="10" y="15" width="280" height="147"/>
@@ -96,27 +96,23 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CFR-yz-3TM">
-                            <rect key="frame" x="15" y="263.33333333333331" width="270" height="248.66666666666669"/>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="edg-hg-5Ej">
+                            <rect key="frame" x="3" y="243.33333333333329" width="294" height="318.66666666666674"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                            <color key="textColor" systemColor="labelColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                        </textView>
+                        </tableView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="vR6-D3-DyN" firstAttribute="top" secondItem="59y-b2-lv1" secondAttribute="top" constant="15" id="0pA-hn-XFy"/>
                         <constraint firstItem="vR6-D3-DyN" firstAttribute="leading" secondItem="59y-b2-lv1" secondAttribute="leading" constant="10" id="1Lx-H7-6w9"/>
                         <constraint firstAttribute="trailing" secondItem="vR6-D3-DyN" secondAttribute="trailing" constant="10" id="235-Pd-0QY"/>
-                        <constraint firstAttribute="trailing" secondItem="CFR-yz-3TM" secondAttribute="trailing" constant="15" id="EuO-ee-3SL"/>
+                        <constraint firstItem="edg-hg-5Ej" firstAttribute="top" secondItem="0kk-9j-P29" secondAttribute="bottom" constant="10" id="Bkm-zn-9pK"/>
+                        <constraint firstAttribute="trailing" secondItem="edg-hg-5Ej" secondAttribute="trailing" constant="3" id="DJM-Xg-uxF"/>
                         <constraint firstItem="0kk-9j-P29" firstAttribute="top" secondItem="vR6-D3-DyN" secondAttribute="bottom" constant="45" id="IOH-Ea-cWh"/>
                         <constraint firstItem="0kk-9j-P29" firstAttribute="centerX" secondItem="59y-b2-lv1" secondAttribute="centerX" id="K4a-aC-Hu9"/>
-                        <constraint firstItem="CFR-yz-3TM" firstAttribute="top" secondItem="0kk-9j-P29" secondAttribute="bottom" constant="30" id="LlZ-lz-RAA"/>
-                        <constraint firstAttribute="bottom" secondItem="CFR-yz-3TM" secondAttribute="bottom" constant="80" id="Utb-on-NqN"/>
-                        <constraint firstAttribute="bottom" secondItem="vR6-D3-DyN" secondAttribute="bottom" constant="430" id="XWi-cU-iNF"/>
-                        <constraint firstItem="CFR-yz-3TM" firstAttribute="leading" secondItem="59y-b2-lv1" secondAttribute="leading" constant="15" id="XtI-fh-kpG"/>
+                        <constraint firstItem="edg-hg-5Ej" firstAttribute="leading" secondItem="59y-b2-lv1" secondAttribute="leading" constant="3" id="VR6-3M-csO"/>
+                        <constraint firstAttribute="bottom" secondItem="edg-hg-5Ej" secondAttribute="bottom" constant="48" id="XSv-vg-BGP"/>
+                        <constraint firstAttribute="bottom" secondItem="vR6-D3-DyN" secondAttribute="bottom" constant="448" id="XWi-cU-iNF"/>
                     </constraints>
                 </view>
             </subviews>
@@ -126,8 +122,8 @@
                 <constraint firstItem="59y-b2-lv1" firstAttribute="top" secondItem="SNH-pl-NL3" secondAttribute="top" constant="100" id="134-qc-pub"/>
                 <constraint firstItem="59y-b2-lv1" firstAttribute="leading" secondItem="93S-eR-4AE" secondAttribute="leading" constant="50" id="5bJ-gG-Mnn"/>
                 <constraint firstItem="59y-b2-lv1" firstAttribute="centerX" secondItem="SNH-pl-NL3" secondAttribute="centerX" id="QQ2-Ya-hqs"/>
-                <constraint firstItem="59y-b2-lv1" firstAttribute="centerY" secondItem="SNH-pl-NL3" secondAttribute="centerY" id="Tpn-pu-gdI"/>
-                <constraint firstItem="SNH-pl-NL3" firstAttribute="bottom" secondItem="59y-b2-lv1" secondAttribute="bottom" constant="100" id="kQJ-EN-4hV"/>
+                <constraint firstItem="59y-b2-lv1" firstAttribute="centerY" secondItem="SNH-pl-NL3" secondAttribute="centerY" constant="9" id="Tpn-pu-gdI"/>
+                <constraint firstItem="SNH-pl-NL3" firstAttribute="bottom" secondItem="59y-b2-lv1" secondAttribute="bottom" constant="82" id="kQJ-EN-4hV"/>
                 <constraint firstAttribute="trailing" secondItem="59y-b2-lv1" secondAttribute="trailing" constant="50" id="laY-oq-zzT"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -137,9 +133,6 @@
     <resources>
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="phone" catalog="system" width="128" height="115"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
