@@ -28,6 +28,13 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vR6-D3-DyN">
                             <rect key="frame" x="10" y="15" width="280" height="147"/>
                             <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k74-ps-mE9">
+                                    <rect key="frame" x="240" y="0.0" width="40" height="32"/>
+                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <connections>
+                                        <action selector="closeModal:" destination="-1" eventType="touchUpInside" id="oNW-mZ-jEh"/>
+                                    </connections>
+                                </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="abn-Uj-UkJ">
                                     <rect key="frame" x="5" y="25" width="270" height="157"/>
                                     <subviews>
@@ -85,6 +92,8 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="abn-Uj-UkJ" firstAttribute="top" secondItem="vR6-D3-DyN" secondAttribute="top" constant="25" id="KRb-75-FX8"/>
+                                <constraint firstItem="k74-ps-mE9" firstAttribute="top" secondItem="vR6-D3-DyN" secondAttribute="top" id="Mic-R0-mLc"/>
+                                <constraint firstAttribute="trailing" secondItem="k74-ps-mE9" secondAttribute="trailing" id="O4D-GR-64J"/>
                                 <constraint firstItem="abn-Uj-UkJ" firstAttribute="leading" secondItem="vR6-D3-DyN" secondAttribute="leading" constant="5" id="cVF-7u-uHh"/>
                                 <constraint firstAttribute="bottom" secondItem="abn-Uj-UkJ" secondAttribute="bottom" constant="-35" id="hJO-mQ-84X"/>
                                 <constraint firstAttribute="trailing" secondItem="abn-Uj-UkJ" secondAttribute="trailing" constant="5" id="kYT-QI-Uhk"/>

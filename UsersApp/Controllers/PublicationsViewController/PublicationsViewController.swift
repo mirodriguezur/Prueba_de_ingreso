@@ -35,6 +35,9 @@ class PublicationsViewController: UIViewController {
         bindViewModel()
         setupTableView()
     }
+    @IBAction func closeModal(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
